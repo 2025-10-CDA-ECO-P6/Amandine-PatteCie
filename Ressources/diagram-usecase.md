@@ -4,8 +4,6 @@ Ce diagramme représente les principales interactions entre l’utilisateur et l
 
 ## Cas d’utilisation inclus :
 
-- Se connecter
-- Se déconnecter
 - Voir liste animaux
 - Rechercher un animal
 - Voir fiche
