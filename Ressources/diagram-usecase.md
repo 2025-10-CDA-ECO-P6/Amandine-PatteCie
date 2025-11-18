@@ -13,4 +13,4 @@ Ce diagramme représente les principales interactions entre l’utilisateur et l
 
 ## Diagramme UML – Cas d’utilisation
 
-![Diagramme UML – Cas d’utilisation](./Ressources/images/Diagram_Use_case-PatteCie.png)
+![Diagramme UML – Cas d’utilisation](./images/Diagram_Use_case-PatteCie.png)
