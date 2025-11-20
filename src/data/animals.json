@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "Milou",
+    "species": "Chat",
+    "breed": "Européen",
+    "gender": "Mâle",
+    "birthDate": "2024-05-15",
+    "color": "Gris tacheté",
+    "weight": "1.2kg",
+    "identification": "250268500945456",
+    "owner": "Dr. Stone",
+    "image": "🐱",
+    "nextAppointment": {
+      "type": "Vaccin",
+      "description": "Prochain RDV : Minou Para vacciné le 25 novembre à 7h!",
+      "date": "2025-11-25",
+      "time": "07h00"
+    },
+    "treatments": [
+      {
+        "name": "Antibiotique Amoxicilline",
+        "startDate": "2025-01-20",
+        "endDate": "2025-01-27",
+        "reason": "Infection cutanée légère",
+        "instructions": [
+          "1 comprimé matin et soir pendant 7 jours",
+          "Donner avec nourriture",
+          "Surveiller nausées et démangeaisons"
+        ]
+      }
+    ],
+    "upcomingAppointments": [
+      {
+        "doctor": "Dr. Stone",
+        "type": "Vaccins",
+        "date": "2025-11-25",
+        "time": "07h00"
+      },
+      {
+        "doctor": "Dr. Vanessa",
+        "type": "Contrôle yeux traitement",
+        "date": "2025-12-12",
+        "time": "14h30"
+      }
+    ]
+  }
+]
