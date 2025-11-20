@@ -9,7 +9,7 @@
     "color": "Gris tacheté",
     "weight": "1.2kg",
     "identification": "250268500945456",
-    "owner": "Dr. Stone",
+    "owner": "Mme Amandine Kemp",
     "image": "🐱",
     "nextAppointment": {
       "type": "Vaccin",
@@ -52,7 +52,7 @@
     "breed": "Bouvier Bernois",
     "gender": "Mâle",
     "birthDate": "2023-03-10",
-    "owner": "M. Dupont",
+    "owner": "M. Alexandre Dupont",
     "image": "🐕",
     "nextAppointment": {
       "type": "Vaccin",
@@ -79,7 +79,7 @@
     "breed": "Berger Allemand",
     "gender": "Mâle",
     "birthDate": "2022-06-20",
-    "owner": "Mme Martin",
+    "owner": "Mme Aurianne Martin",
     "image": "🐕",
     "nextAppointment": {
       "type": "Contrôle",
@@ -107,7 +107,7 @@
     "breed": "Golden Retriever",
     "gender": "Femelle",
     "birthDate": "2023-08-15",
-    "owner": "M. Bernard",
+    "owner": "M. Lucien Bernard",
     "image": "🐕"
   },
   {
@@ -117,7 +117,7 @@
     "breed": "Labrador",
     "gender": "Mâle",
     "birthDate": "2021-11-05",
-    "owner": "Mme Petit",
+    "owner": "Mme Emilie Petit",
     "image": "🐕"
   }
 ]
