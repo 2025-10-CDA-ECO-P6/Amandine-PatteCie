@@ -1,4 +1,4 @@
-## 🟦 2 — User Stories
+## User Stories
 
 ### 🎯 Format :
 > En tant que **[acteur]**, je veux **[fonction]**, afin de **[bénéfice]**.
