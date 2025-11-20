@@ -117,11 +117,11 @@ Faciliter la recherche d'animaux et l'organisation des rendez-vous.
 
 ## Tableau récapitulatif
 
-| Critère | Dr. Stone Lucie                    | Julie Dupont                   | Stéphanie Leroy |
-|---------|------------------------------------|--------------------------------|-----------------|
-| **Rôle** | Vétérinaire                        | Propriétaire                   | Secrétaire |
-| **Âge** | 38 ans                             | 29 ans                         | 34 ans |
+| Critère | Dr. Stone Lucie                    | Julie Dupont                   | Stéphanie Leroy                  |
+|---------|------------------------------------|--------------------------------|----------------------------------|
+| **Rôle** | Vétérinaire                        | Propriétaire                   | Secrétaire                       |
+| **Âge** | 38 ans                             | 29 ans                         | 34 ans                           |
 | **Objectif principal** | Accès rapide aux données médicales | Suivi de la santé de son animal | Gestion efficace des rendez-vous |
-| **Niveau digital** | Intermédiaire                      | Moyen                          | Intermédiaire |
-| **Principale frustration** | Données dispersées                 | Jargon médical complexe        | Applications peu intuitives |
-| **Device principal** | Ordinateur clinique                | Smartphone                     | Ordinateur clinique |
+| **Niveau digital** | Intermédiaire                      | Moyen                          | Intermédiaire                    |
+| **Principale frustration** | Données dispersées                 | Jargon médical complexe        | Applications peu intuitives      |
+| **Device principal** | Ordinateur clinique                | Smartphone                     | Ordinateur clinique              |
