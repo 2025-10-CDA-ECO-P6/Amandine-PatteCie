@@ -13,7 +13,7 @@
     "image": "🐱",
     "nextAppointment": {
       "type": "Vaccin",
-      "description": "Prochain RDV : Minou Para vacciné le 25 novembre à 7h!",
+      "description": "Prochain RDV : Milou Para vacciné le 25 novembre à 7h!",
       "date": "2025-11-25",
       "time": "07h00"
     },
@@ -44,5 +44,80 @@
         "time": "14h30"
       }
     ]
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "species": "Chien",
+    "breed": "Bouvier Bernois",
+    "gender": "Mâle",
+    "birthDate": "2023-03-10",
+    "owner": "M. Dupont",
+    "image": "🐕",
+    "nextAppointment": {
+      "type": "Vaccin",
+      "description": "Prochain RDV : rappel vaccin rage le 10 décembre à 10h00",
+      "date": "2025-12-10",
+      "time": "10h00"
+    },
+    "treatments": [
+      {
+        "name": "Vermifuge Milbemax",
+        "startDate": "2025-10-01",
+        "endDate": "2025-10-01",
+        "reason": "Prévention des vers",
+        "instructions": [
+          "1 comprimé unique à donner avec la nourriture"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Rex",
+    "species": "Chien",
+    "breed": "Berger Allemand",
+    "gender": "Mâle",
+    "birthDate": "2022-06-20",
+    "owner": "Mme Martin",
+    "image": "🐕",
+    "nextAppointment": {
+      "type": "Contrôle",
+      "description": "Contrôle annuel de santé le 5 décembre à 15h30",
+      "date": "2025-12-05",
+      "time": "15h30"
+    },
+    "treatments": [
+      {
+        "name": "Shampoing médicamenteux",
+        "startDate": "2025-09-15",
+        "endDate": "2025-09-22",
+        "reason": "Dermatite légère",
+        "instructions": [
+          "Shampooing 2 fois par semaine",
+          "Éviter humidité excessive"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sacha",
+    "species": "Chien",
+    "breed": "Golden Retriever",
+    "gender": "Femelle",
+    "birthDate": "2023-08-15",
+    "owner": "M. Bernard",
+    "image": "🐕"
+  },
+  {
+    "id": 5,
+    "name": "Lucky",
+    "species": "Chien",
+    "breed": "Labrador",
+    "gender": "Mâle",
+    "birthDate": "2021-11-05",
+    "owner": "Mme Petit",
+    "image": "🐕"
   }
 ]
