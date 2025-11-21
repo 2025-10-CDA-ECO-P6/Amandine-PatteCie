@@ -145,3 +145,5 @@ Projet : Patte&Cie
 
 ## Présentation Vidéo
 Vous pouvez voir une présentation vidéo du projet ici : [Présentation du projet](https://www.loom.com/share/4e358d1bf5c34822bdc2a532be9a1cf2)
+
+Et vous pouvez accéder au site déployé ici : [Site déployé](https://amandine-pattecie.onrender.com/)
