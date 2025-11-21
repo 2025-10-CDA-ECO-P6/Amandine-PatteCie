@@ -47,7 +47,7 @@ export default function AnimalHealthPage() {
                                 Naissance: {formatDate(animal.birthDate)} <br />
                                 {animal.weight && <>Poids: {animal.weight}<br /></>}
                                 {animal.color && <>Couleur: {animal.color}<br /></>}
-                                {animal.identification && <>N° d'identification: {animal.identification}</>}
+                                {animal.identification && <>N° d&apos;identification: {animal.identification}</>}
                             </div>
                         </div>
                         <div className={styles.healthCardImageContainer}>
