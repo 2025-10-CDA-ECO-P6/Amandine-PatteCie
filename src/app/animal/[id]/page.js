@@ -1,59 +1,108 @@
-// src/app/animal/[id]/page.js
-
 "use client";
 
-import Header from "../../../components/header/Header";
-import { Syringe } from "lucide-react";
+import { useParams, useRouter } from 'next/navigation';
+import Header from '@/components/header/Header';
+import { Syringe, Calendar, User } from 'lucide-react';
+import styles from './page.module.css';
+import animalsData from '@/data/animals.json';
 
-export default function AnimalHealthPage({ animal, onBack }) {
+export default function AnimalHealthPage() {
+    const params = useParams();
+    const router = useRouter();
+    const animal = animalsData.find(a => a.id === parseInt(params.id));
+
+    if (!animal) {
+        return (
+            <div className={styles.healthPageContainer}>
+                <Header title="Animal non trouvé" onBack={() => router.push('/')} />
+                <div className={styles.healthContentPadding}>
+                    <p>Aucun animal trouvé avec cet identifiant.</p>
+                </div>
+            </div>
+        );
+    }
+
+    const formatDate = (dateString) => {
+        if (!dateString) return '';
+        const date = new Date(dateString);
+        return date.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+    };
+
     return (
-        <div className="min-h-screen bg-gray-50 pb-20">
-            {/* HEADER AVEC BOUTON RETOUR */}
-            <Header title={`Carnet de santé de ${animal.name}`} onBack={onBack} />
+        <div className={styles.healthPageContainer}>
+            <Header
+                title={`Carnet de santé de ${animal.name}`}
+                onBack={() => router.push('/')}
+            />
 
-            <div className="px-4 py-4 space-y-4">
-                {/* Carte de l’animal */}
-                <div className="bg-gradient-to-br from-indigo-400 to-purple-500 rounded-3xl p-5 text-white shadow-lg">
-                    <div className="flex justify-between items-start mb-4">
-                        <div>
-                            <div className="text-lg font-bold">{animal.name}</div>
-                            <div className="text-sm opacity-90">
+            <div className={styles.healthContentPadding}>
+                <div className={`${styles.healthCardGradient} animate-fade-in`}>
+                    <div className={styles.healthCardHeader}>
+                        <div className={styles.healthCardInfo}>
+                            <div className={styles.healthCardName}>{animal.name}</div>
+                            <div className={styles.healthCardDetails}>
                                 Espèce: {animal.species} <br />
                                 Race: {animal.breed} <br />
                                 Sexe: {animal.gender} <br />
-                                Naissance: {animal.birthDate} <br />
-                                {animal.weight && <>Poids: {animal.weight}</>}
+                                Naissance: {formatDate(animal.birthDate)} <br />
+                                {animal.weight && <>Poids: {animal.weight}<br /></>}
+                                {animal.color && <>Couleur: {animal.color}<br /></>}
+                                {animal.identification && <>N° d'identification: {animal.identification}</>}
                             </div>
                         </div>
-                        <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center text-4xl">
+                        <div className={styles.healthCardImageContainer}>
                             {animal.image}
                         </div>
                     </div>
 
-                    {/* Prochains RDV */}
                     {animal.nextAppointment && (
-                        <div className="bg-white/90 rounded-2xl p-4 text-gray-800">
-                            <div className="font-bold text-indigo-600">Prochains RDV :</div>
-                            <div className="text-sm">{animal.nextAppointment.description}</div>
+                        <div className={styles.healthCardAppointment}>
+                            <div className={styles.healthCardAppointmentTitle}>
+                                Prochains RDV :
+                            </div>
+                            <div className={styles.healthCardAppointmentDescription}>
+                                {animal.nextAppointment.description}
+                            </div>
                         </div>
                     )}
                 </div>
 
-                {/* Traitements */}
-                {animal.treatments && (
-                    <div className="bg-white rounded-2xl shadow-md p-4">
-                        <h2 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                            <Syringe className="w-5 h-5 text-indigo-500" />
+                {animal.upcomingAppointments && animal.upcomingAppointments.length > 0 && (
+                    <div className={`${styles.treatmentContainer} animate-fade-in`}>
+                        <h2 className={styles.treatmentHeader}>
+                            <Calendar className={styles.treatmentIcon} />
+                            Prochains RDV
+                        </h2>
+                        {animal.upcomingAppointments.map((appointment, i) => (
+                            <div key={i} className={styles.appointmentCard}>
+                                <div className={styles.appointmentDoctor}>
+                                    <User className={styles.doctorIcon} />
+                                    {appointment.doctor}
+                                </div>
+                                <div className={styles.appointmentType}>{appointment.type}</div>
+                                <div className={styles.appointmentDateTime}>
+                                    RDV le {formatDate(appointment.date)} à {appointment.time}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                {animal.treatments && animal.treatments.length > 0 && (
+                    <div className={`${styles.treatmentContainer} animate-fade-in`}>
+                        <h2 className={styles.treatmentHeader}>
+                            <Syringe className={styles.treatmentIcon} />
                             Traitements
                         </h2>
                         {animal.treatments.map((t, i) => (
-                            <div key={i} className="bg-indigo-50 p-3 rounded-xl mb-2">
-                                <div className="font-semibold text-gray-800">{t.name}</div>
-                                <div className="text-sm text-gray-600 mb-2">
-                                    {t.startDate} - {t.endDate} <br />
+                            <div key={i} className={styles.treatmentCard}>
+                                <div className={styles.treatmentName}>{t.name}</div>
+                                <div className={styles.treatmentDates}>
+                                    Date de début: {formatDate(t.startDate)} <br />
+                                    Date de fin: {formatDate(t.endDate)} <br />
                                     Raison: {t.reason}
                                 </div>
-                                <ul className="list-disc list-inside text-sm text-gray-700">
+                                <ul className={styles.treatmentInstructions}>
                                     {t.instructions.map((instr, idx) => (
                                         <li key={idx}>{instr}</li>
                                     ))}

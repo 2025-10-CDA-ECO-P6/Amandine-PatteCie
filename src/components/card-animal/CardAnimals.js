@@ -1,22 +1,23 @@
-import { ChevronRight } from "lucide-react";
+"use client";
 
-export default function AnimalCard({ animal, onClick }) {
+import { ChevronRight } from "lucide-react";
+import styles from './CardAnimals.module.css';
+
+export default function CardAnimals({animal, onClick}) {
     return (
-        <div
-            onClick={onClick}
-            className="flex items-center justify-between p-3 bg-white rounded-xl shadow-sm hover:bg-gray-50 cursor-pointer transition"
-        >
-            <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-2xl">
+        <div onClick={onClick} className={`${styles.animalCard} animate-fade-in`}>
+            <div className={styles.animalCardContent}>
+                <div className={styles.animalCardAvatar}>
                     {animal.image}
                 </div>
                 <div>
-                    <div className="font-medium text-gray-800">{animal.name}</div>
-                    <div className="text-sm text-gray-500">
+                    <div className={styles.animalCardName}>{animal.name}</div>
+                    <div className={styles.animalCardOwner}>
                         Propriétaire: {animal.owner}
                     </div>
                 </div>
             </div>
+            <ChevronRight className={styles.animalCardIcon} />
         </div>
     );
 }
