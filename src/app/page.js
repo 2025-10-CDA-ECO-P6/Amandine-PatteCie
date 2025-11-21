@@ -33,7 +33,7 @@ export default function Home() {
             <div className={styles.contentPadding}>
                 <div className={`${styles.animalsListHeader} animate-fade-in`}>
                     <div className={styles.animalsListTitle}>
-                        Hello, Dr. Stone !
+                        Bonjour, Dr. Stone !
                     </div>
                     <div className={styles.searchContainer}>
                         <Search className={styles.searchIcon} />

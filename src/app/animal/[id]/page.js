@@ -58,7 +58,7 @@ export default function AnimalHealthPage() {
                     {animal.nextAppointment && (
                         <div className={styles.healthCardAppointment}>
                             <div className={styles.healthCardAppointmentTitle}>
-                                Prochains RDV :
+                                Prochain RDV :
                             </div>
                             <div className={styles.healthCardAppointmentDescription}>
                                 {animal.nextAppointment.description}
